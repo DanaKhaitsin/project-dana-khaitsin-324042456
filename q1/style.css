@@ -1,3 +1,18 @@
+.page-title {
+  color: #35a1e9; 
+  text-shadow: 1px 1px 2px #77a8f1aa; 
+}
+
+
+.day-h {
+  color: #35a1e9; 
+  text-shadow: 1px 1px 2px #77a8f1aa; 
+}
+
+
+
+
+
 .time {
   color: rgb(126, 0, 245);
   font-weight: bold;
@@ -14,13 +29,42 @@
 }
 
 .card-sunday {
-  border-color: #8b190a;
+  border-color: #8a190a;
   background-color: #ff8555;
 }
+
+.card-sunday h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #8a190a;
+  margin-bottom: 0.5rem;
+}
+
+.card-sunday h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #a84111;
+  margin-bottom: 0.5rem;
+}
+
 
 .card-monday {
   border-color: #6e500d;
   background-color: #ffcb3d;
+}
+
+.card-monday h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #6e500d;
+  margin-bottom: 0.5rem;
+}
+
+.card-monday h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #946c17;
+  margin-bottom: 0.5rem;
 }
 
 .card-monday-alt {
@@ -28,32 +72,150 @@
   background-color: #d3fff3;
 }
 
+.card-monday-alt h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #31886e;
+  margin-bottom: 0.5rem;
+}
+
+.card-monday-alt h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #40a788;
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+
 .card-tuesday {
   border-color: #0f096e;
   background-color: #b2c4ff;
 }
+
+.card-tuesday h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #0f096e;
+  margin-bottom: 0.5rem;
+}
+
+.card-tuesday h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #191191;
+  margin-bottom: 0.5rem;
+}
+
+
+
+
 
 .card-wednesday {
   border-color: #aa2098;
   background-color: #eca8d2;
 }
 
+.card-wednesday h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #aa2098;
+  margin-bottom: 0.5rem;
+}
+
+.card-wednesday h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #c22a94;
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+
+
 .card-wednesday-alt {
   border-color: #296cd1;
   background-color: #bbf1ff;
 }
+
+
+.card-wednesday-alt h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #296cd1;
+  margin-bottom: 0.5rem;
+}
+
+.card-wednesday-alt h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #3279e4;
+  margin-bottom: 0.5rem;
+}
+
+
 
 .card-thursday {
   border-color: #1d8361;
   background-color: #7de998;
 }
 
+.card-thursday h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1d8361;
+  margin-bottom: 0.5rem;
+}
+
+.card-thursday h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2ca57d;
+  margin-bottom: 0.5rem;
+}
+
+
+
 .card-friday {
   border-color: #201b0c;
   background-color: #cac09f;
 }
 
+.card-friday h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #423714;
+  margin-bottom: 0.5rem;
+}
+
+.card-friday h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #493e1c;
+  margin-bottom: 0.5rem;
+}
+
+
+
 .card-friday-alt {
   border-color: #520707;
   background-color: #f7a196;
+}
+
+.card-friday-alt h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #520707;
+  margin-bottom: 0.5rem;
+}
+
+.card-friday-alt h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #810f0f;
+  margin-bottom: 0.5rem;
 }
