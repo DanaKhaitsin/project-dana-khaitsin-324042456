@@ -64,11 +64,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!selectedFeeling) {
       data = JSON.parse(localStorage.getItem('circusAttractionList')) || [];
     } else {
-      data.sort((a, b) => {
-        if (a.feeling === selectedFeeling && b.feeling !== selectedFeeling) return -1;
-        if (a.feeling !== selectedFeeling && b.feeling === selectedFeeling) return 1;
-        return 0;
-      });
+      var tempData = JSON.parse(localStorage.getItem('circusAttractionList')) || [];
+      data = [];
+      for (var i = 0; i < tempData.length; i++)
+        {
+          if (tempData[i].feeling == selectedFeeling)
+          data.push(tempData[i])
+        }
+      // data.sort((a, b) => {
+      //   if (a.feeling === selectedFeeling && b.feeling !== selectedFeeling) return -1;
+      //   if (a.feeling !== selectedFeeling && b.feeling === selectedFeeling) return 1;
+      //   return 0;
+      // });
     }
     renderCards();
   };
