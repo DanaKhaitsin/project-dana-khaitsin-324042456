@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>קרקס רגשי</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>הצעת מופעים לקרקס רגשי</h1>
+
+  <form id="circusForm">
+    <label for="attractionName">שם האטרקציה שלכם:</label>
+    <input type="text" id="attractionName" required>
+
+    <label for="mainFeeling">מהו הרגש המרכזי של האטרקציה?</label>
+    <select id="mainFeeling" required>
+      <option value="">אנא בחר רגש</option>
+      <option>פחד</option>
+      <option>שמחה</option>
+      <option>בלבול</option>
+      <option>געגוע</option>
+    </select>
+
+    <label for="yesNo">האם יש צורך בהשתתפות, או רק צפיה?</label>
+    <select id="yesNo" required>
+      <option value="">אנא בחר יש או אין:</option>
+      <option>יש השתתפות</option>
+      <option>אין השתתפות</option>
+    </select>
+
+    <label for="equipment">האם יש ציוד נדרש (שדה אופציונלי)</label>
+    <textarea id="equipment" rows="4"></textarea>
+
+    <label for="ageRestriction">האם קיימת מגבלת גיל?</label>
+    <select id="ageRestriction" required>
+      <option value="">אנא בחר גיל</option>
+      <option value="toddler">תינוק</option>
+      <option value="teen">נער</option>
+      <option value="adult">מבוגר</option>
+      <option value="na">ללא הגבלה</option>
+    </select>
+
+    <label for="intensity">דרגת אינטנסיביות:</label>
+    <input type="range" id="intensity" min="1" max="5" value="3">
+
+    <label for="email">תיבת הדוא"ל שלכם:</label>
+    <input type="email" id="email" required>
+
+    <div id="message"></div>
+
+    <button type="button" id="sendBtn">שלח טופס</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
