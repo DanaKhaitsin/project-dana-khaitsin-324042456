@@ -1,4 +1,5 @@
 * {
+  font-family: "Uncial Antiqua", cursive;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,21 +10,28 @@ html {
 }
 
 body {
+  background-color: #2e1414; 
+  color: #f3e2d6;
+
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #1a0b0b; 
-  color: #fceee3;
+
 }
 
 header {
-  background-color: #4b1e1e; 
-  color: #ffcc99; 
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 200;
+  background-color: #3f1717; 
+  color: #f1bd89; 
+
   text-align: center;
+
+  padding: 2rem;
+ 
+  top: 2;
+  z-index: 200;
+  
+
+   position: sticky;
 }
 
 .container {
@@ -33,9 +41,9 @@ header {
 }
 
 nav {
-  width: 200px;
+  width: 170px;
   height: 100vh;
-  background-color: #2e0f0f; 
+  background-color: #290d0b; 
 
   position: fixed;
   top: 0;
@@ -52,10 +60,9 @@ nav {
 }
 
 nav a {
-  color: #ff9d5c;
-  text-decoration: none;
+  color: #ec7855;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 main {
@@ -70,15 +77,17 @@ main {
 section {
   display: flex;
   gap: 2rem;
+
+
   flex-wrap: wrap;
 }
 
 .card {
   flex: 1 1 45%;
-  background-color: #3b1a1a; 
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.2);
+  background-color: #2e1316; 
+  padding: 1.4rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(236, 120, 42, 0.171);
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
@@ -86,25 +95,25 @@ section {
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(255, 87, 34, 0.4); 
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(214, 72, 28, 0.288); 
 }
 
 .card h1 {
   font-size: 1.6rem;
-  color: #ff5722; 
+  color: #e44211; 
   margin-bottom: 0.5rem;
 }
 
 .card p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #ffe0b2;
+  color: #daac97;
 }
 
 .card label {
-  background-color: #ff7043; 
-  color: #3e0e0e;
+  background-color: #e29146; 
+  color: #310709;
   font-weight: bold;
   padding: 0.3rem 0.6rem;
   border-radius: 8px;
@@ -114,21 +123,24 @@ section {
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 300px;
   object-fit: cover;
   border-radius: 8px;
 }
 
 footer {
-  background-color: #a33a00; 
+  background-color: #a3390f; 
   color: #fff3e0;
   padding: 1rem;
   text-align: center;
+
+
+  padding: 1rem;
 }
 
 footer a button {
   padding: 0.5rem 1rem;
-  background-color: #330000; 
+  background-color: #500a0a; 
   border: none;
   color: white;
   cursor: pointer;
@@ -136,12 +148,12 @@ footer a button {
 }
 
 footer a button:hover {
-  background-color: #ff7043; 
+  background-color: #ec513d; 
 }
 
 label {
   font-size: 0.9rem;
-  color: #ffa726; 
+  color: #eeac4a; 
 }
 
 .smoke-container {
@@ -164,8 +176,9 @@ label {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  font-size: 1.2rem;
-  color: #ffe0b2;
+  font-size: 1.3rem;
+
+  color: #f1e7b8;
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 3;
@@ -202,23 +215,26 @@ label {
 
 .section-divider {
   height: 6px;
-  background: linear-gradient(to right, #000000, #2b0e03, #7a2605); 
-  margin: 2rem 0;
+  background: linear-gradient(to right, #0a0a0a, #4b1c09, #a05b0c); 
+  margin: 3rem 0;
   border-radius: 3px;
-  box-shadow: 0 0 10px rgba(236, 116, 72, 0.6); 
+  box-shadow: 0 0 10px rgba(218, 165, 85, 0.514); 
 }
 
 .card label.label-blue {
+  font-family: "Montserrat", sans-serif;
   background-color: #3f5870;
   color: rgb(243, 255, 255);
 }
 
 .card label.label-yellow {
+  font-family: "Montserrat", sans-serif;
   background-color: #bebd82;
   color: #180806;
 }
 
 .card label.label-green {
+  font-family: "Montserrat", sans-serif;
   background-color: #4d704e;
   color: rgb(249, 255, 252);
 }
