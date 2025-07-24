@@ -1,0 +1,66 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  background: #94f0eb;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  color: #201e88;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+#message {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+#message.success {
+  color: rgb(15, 255, 6);
+}
+
+#message.error {
+  color: rgb(255, 0, 0);
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #520422;
+  border: none;
+  color: rgb(248, 255, 240);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #006370;
+}
+
+.range-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.range-wrapper span {
+  width: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+

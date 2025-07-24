@@ -41,8 +41,16 @@
       <option value="na">ללא הגבלה</option>
     </select>
 
+
+
     <label for="intensity">דרגת אינטנסיביות:</label>
-    <input type="range" id="intensity" min="1" max="5" value="3">
+        <div class="range-wrapper">
+            <span id="intensityMin">1</span>
+            <input type="range" id="intensity" min="1" max="5" value="3">
+            <span id="intensityMax">5</span>
+        </div>
+
+
 
     <label for="email">תיבת הדוא"ל שלכם:</label>
     <input type="email" id="email" required>
