@@ -1,0 +1,59 @@
+.time {
+  color: rgb(126, 0, 245);
+  font-weight: bold;
+}
+
+.lesson-img {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  margin-bottom: 1rem;
+  border-width: 2px;
+}
+
+.card-sunday {
+  border-color: #8b190a;
+  background-color: #ff8555;
+}
+
+.card-monday {
+  border-color: #6e500d;
+  background-color: #ffcb3d;
+}
+
+.card-monday-alt {
+  border-color: #31886e;
+  background-color: #d3fff3;
+}
+
+.card-tuesday {
+  border-color: #0f096e;
+  background-color: #b2c4ff;
+}
+
+.card-wednesday {
+  border-color: #aa2098;
+  background-color: #eca8d2;
+}
+
+.card-wednesday-alt {
+  border-color: #296cd1;
+  background-color: #bbf1ff;
+}
+
+.card-thursday {
+  border-color: #1d8361;
+  background-color: #7de998;
+}
+
+.card-friday {
+  border-color: #201b0c;
+  background-color: #cac09f;
+}
+
+.card-friday-alt {
+  border-color: #520707;
+  background-color: #f7a196;
+}
