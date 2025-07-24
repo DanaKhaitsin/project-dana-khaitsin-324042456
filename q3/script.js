@@ -58,7 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
         email
       };
 
-      localStorage.setItem('circusAttractionData', JSON.stringify(formData));
+      //localStorage.setItem('circusAttractionData', JSON.stringify(formData));
+
+      let existing = JSON.parse(localStorage.getItem('circusAttractionList')) || [];
+      existing.push(formData);
+      localStorage.setItem('circusAttractionList', JSON.stringify(existing));
 
       messageDiv.textContent = "All done";
       messageDiv.className = "success";
