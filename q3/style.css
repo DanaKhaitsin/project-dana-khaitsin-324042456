@@ -1,13 +1,13 @@
 body {
-  font-family: "Times New Roman", Times, serif;
-  background: #94f0eb;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #e0f7fa;
   padding: 2rem;
   max-width: 600px;
   margin: auto;
 }
 
 h1 {
-  color: #201e88;
+  color: #0077b6;
   text-align: center;
 }
 
@@ -15,13 +15,23 @@ label {
   display: block;
   margin-top: 1rem;
   font-weight: bold;
+  color: #01579b;
+  font-size: 15px;
+  transition: color 0.3s ease;
 }
+
+label:hover {
+  color: #0288d1;
+}
+
 
 input, select, textarea {
   width: 100%;
   padding: 8px;
   margin-top: 4px;
   box-sizing: border-box;
+  border: 1px solid #b2ebf2;
+  border-radius: 4px;
 }
 
 #message {
@@ -30,26 +40,26 @@ input, select, textarea {
 }
 
 #message.success {
-  color: rgb(15, 255, 6);
+  color: #2e7d32;
 }
 
 #message.error {
-  color: rgb(255, 0, 0);
+  color: #d32f2f;
 }
 
 button {
   margin-top: 1.5rem;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #520422;
+  background-color: #0288d1;
   border: none;
-  color: rgb(248, 255, 240);
+  color: #ffffff;
   cursor: pointer;
   border-radius: 4px;
 }
 
 button:hover {
-  background-color: #006370;
+  background-color: #0277bd;
 }
 
 .range-wrapper {
@@ -63,4 +73,3 @@ button:hover {
   text-align: center;
   font-weight: bold;
 }
-
