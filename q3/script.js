@@ -56,12 +56,36 @@ document.addEventListener('DOMContentLoaded', () => {
     return regex.test(email);
   }
 
+
+
   sendBtn.addEventListener('click', () => {
+    var selectedAge ="";
+    //switch (ageRestriction.value)
+    switch (document.getElementById('ageRestriction').value)
+    {
+      case 'toddler':
+        selectedAge = "תינוק";
+        break;
+      case 'teen':
+        selectedAge = "נער";
+        break;
+
+      case 'adult':
+        selectedAge = "מבוגר";
+        break;
+
+      default:
+        selectedAge = "ללא הגבלה";
+    }
+
+
+
+
     const name = document.getElementById('attractionName').value.trim();
     const feeling = document.getElementById('mainFeeling').value;
     const yesNo = document.getElementById('yesNo').value;
     const equipment = document.getElementById('equipment').value.trim();
-    const age = ageRestriction.value;
+    const age = selectedAge;
     const intensityVal = intensity.value;
     const email = document.getElementById('email').value.trim();
 
@@ -99,12 +123,30 @@ document.addEventListener('DOMContentLoaded', () => {
   editBtn.addEventListener('click', () => {
     if (!editData) return;
 
+    var selectedAge ="";
+    switch (document.getElementById('ageRestriction').value)
+    {
+      case 'toddler':
+        selectedAge = "תינוק";
+        break;
+      case 'teen':
+        selectedAge = "נער";
+        break;
+
+      case 'adult':
+        selectedAge = "מבוגר";
+        break;
+
+      default:
+        selectedAge = "ללא הגבלה";
+    }
+
     const updated = {
       name: document.getElementById('attractionName').value.trim(),
       feeling: document.getElementById('mainFeeling').value,
       yesNo: document.getElementById('yesNo').value,
       equipment: document.getElementById('equipment').value.trim(),
-      age: document.getElementById('ageRestriction').value,
+      age: selectedAge,
       intensity: document.getElementById('intensity').value,
       email: document.getElementById('email').value.trim()
     };

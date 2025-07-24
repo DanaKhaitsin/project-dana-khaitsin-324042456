@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h2>${item.name}</h2>
         <p><strong>סוג רגש:</strong> ${item.feeling}</p>
         <p><strong>האם יש השתתפות:</strong> ${item.yesNo}</p>
-        <p><strong>ציוד נדרש:</strong> ${item.equipment || 'None'}</p>
+        <p><strong>ציוד נדרש:</strong> ${item.equipment || 'ללא'}</p>
         <p><strong>הגבלת גיל:</strong> ${item.age}</p>
         <p><strong>אינטנסיביות:</strong> ${item.intensity}</p>
         <p><strong>תיבת דוא"ל:</strong> ${item.email}</p>
