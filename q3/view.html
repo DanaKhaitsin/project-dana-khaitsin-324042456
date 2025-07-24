@@ -9,7 +9,7 @@
   <h1>הצעות קרקס רגשות</h1>
 
   <div class="top-controls">
-    <button onclick="window.location.href='index.html'">חזרה אל הטופס</button>
+
 
     <select id="entrySelector">
       <option value="">אנא בחר הצעה קיימת</option>
@@ -17,7 +17,20 @@
 
     <button onclick="deleteSelected()">מחק הצעה</button>
     <button onclick="loadToForm()">ערוך הצעה</button>
+
+        <select id="sortFeeling" onchange="sortByFeeling()">
+    <option value="">מיין לפי סוג רגש</option>
+    <option value="fear">פחד</option>
+    <option value="happy">שמחה</option>
+    <option value="confused">בלבול</option>
+    <option value="missing">געגוע</option>
+  </select>
+
+  <button onclick="window.location.href='index.html'">חזרה אל הטופס</button>
+  
   </div>
+
+
 
   <div id="displayMessage" class=""></div>
 
