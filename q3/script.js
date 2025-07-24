@@ -4,12 +4,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const intensityMin = document.getElementById('intensityMin');
   const intensityMax = document.getElementById('intensityMax');
   const sendBtn = document.getElementById('sendBtn');
+  const editBtn = document.getElementById('editBtn');
   const messageDiv = document.getElementById('message');
+
+
+
+  const editData = JSON.parse(localStorage.getItem('editAttraction'));
+
+  if (editData) {
+    document.getElementById('attractionName').value = editData.name;
+    document.getElementById('mainFeeling').value = editData.feeling;
+    document.getElementById('yesNo').value = editData.yesNo;
+    document.getElementById('equipment').value = editData.equipment;
+    document.getElementById('ageRestriction').value = editData.age;
+    document.getElementById('intensity').value = editData.intensity;
+    document.getElementById('email').value = editData.email;
+    editBtn.style.display = 'inline-block';
+
+    ageRestriction.dispatchEvent(new Event('change'));
+  }
+
+
 
   function updateIntensityLimits(min, max, defaultValue = min) {
     intensity.min = min;
     intensity.max = max;
-    intensity.value = defaultValue;
+
+    if (parseInt(intensity.value) < min || parseInt(intensity.value) > max) {
+      intensity.value = defaultValue;
+    }
+
     intensityMin.textContent = min;
     intensityMax.textContent = max;
   }
@@ -58,17 +82,49 @@ document.addEventListener('DOMContentLoaded', () => {
         email
       };
 
-      //localStorage.setItem('circusAttractionData', JSON.stringify(formData));
+      const list = JSON.parse(localStorage.getItem('circusAttractionList')) || [];
+      list.push(formData);
+      localStorage.setItem('circusAttractionList', JSON.stringify(list));
+      localStorage.removeItem('editAttraction');
 
-      let existing = JSON.parse(localStorage.getItem('circusAttractionList')) || [];
-      existing.push(formData);
-      localStorage.setItem('circusAttractionList', JSON.stringify(existing));
-
-      messageDiv.textContent = "All done";
+      messageDiv.textContent = "פרטים נשלחו!";
       messageDiv.className = "success";
     } else {
-      messageDiv.textContent = "Recheck your details";
+      messageDiv.textContent = "אנא בדוק נתונים ונסה שוב...";
       messageDiv.className = "error";
     }
+  });
+
+
+  editBtn.addEventListener('click', () => {
+    if (!editData) return;
+
+    const updated = {
+      name: document.getElementById('attractionName').value.trim(),
+      feeling: document.getElementById('mainFeeling').value,
+      yesNo: document.getElementById('yesNo').value,
+      equipment: document.getElementById('equipment').value.trim(),
+      age: document.getElementById('ageRestriction').value,
+      intensity: document.getElementById('intensity').value,
+      email: document.getElementById('email').value.trim()
+    };
+
+    if (
+      !updated.name || !updated.feeling || !updated.yesNo ||
+      !updated.age || !updated.email || !validateEmail(updated.email)
+    ) {
+      messageDiv.textContent = "Recheck your details";
+      messageDiv.className = "error";
+      return;
+    }
+
+    const list = JSON.parse(localStorage.getItem('circusAttractionList')) || [];
+    list[editData.index] = updated;
+    localStorage.setItem('circusAttractionList', JSON.stringify(list));
+    localStorage.removeItem('editAttraction');
+
+messageDiv.textContent = "שונה בהצלחה!";
+messageDiv.className = "success";
+
   });
 });

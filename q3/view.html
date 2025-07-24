@@ -2,11 +2,25 @@
 <html lang="he" dir="rtl"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Attraction Submissions</title>
+  <title>הצעות הקרקס</title>
   <link rel="stylesheet" href="view.css" />
 </head>
 <body>
-  <h1>Submitted Circus Attractions</h1>
+  <h1>הצעות קרקס רגשות</h1>
+
+  <div class="top-controls">
+    <button onclick="window.location.href='index.html'">חזרה אל הטופס</button>
+
+    <select id="entrySelector">
+      <option value="">אנא בחר הצעה קיימת</option>
+    </select>
+
+    <button onclick="deleteSelected()">מחק הצעה</button>
+    <button onclick="loadToForm()">ערוך הצעה</button>
+  </div>
+
+  <div id="displayMessage" class=""></div>
+
   <div id="cardContainer"></div>
 
   <script src="view.js"></script>

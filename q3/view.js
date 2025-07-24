@@ -1,28 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('cardContainer');
-  const stored = localStorage.getItem('circusAttractionList');
+  const selector = document.getElementById('entrySelector');
+  let data = JSON.parse(localStorage.getItem('circusAttractionList')) || [];
 
-  if (!stored) {
-    container.innerHTML = '<p>No submissions found.</p>';
+  function renderCards() {
+    container.innerHTML = '';
+    selector.innerHTML = '<option value="">בחר הצעה קיימת</option>';
+
+    data.forEach((item, index) => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <h2>${item.name}</h2>
+      <p><strong>סוג רגש:</strong> ${item.feeling}</p>
+      <p><strong>האם יש השתתפות:</strong> ${item.yesNo}</p>
+      <p><strong>ציוד נדרש:</strong> ${item.equipment || 'None'}</p>
+      <p><strong>הגבלת גיל:</strong> ${item.age}</p>
+      <p><strong>אינטנסיביות:</strong> ${item.intensity}</p>
+      <p><strong>תיבת דוא"ל:</strong> ${item.email}</p>
+      `;
+      container.appendChild(card);
+
+      const opt = document.createElement('option');
+      opt.value = index;
+      opt.textContent = `${item.name} (${item.email})`;
+      selector.appendChild(opt);
+    });
+  }
+
+  renderCards();
+
+  const message = document.getElementById('displayMessage');
+
+window.deleteSelected = () => {
+  const index = selector.value;
+  if (index === "") {
+    message.textContent = "אנא בחר את ההצעה שתרצה למחוק...";
+    message.className = "error";
     return;
   }
 
-  const attractions = JSON.parse(stored);
+  data.splice(index, 1);
+  localStorage.setItem('circusAttractionList', JSON.stringify(data));
+  window.location.reload();
+};
 
-  attractions.forEach((item, index) => {
-    const card = document.createElement('div');
-    card.className = 'card';
+window.loadToForm = () => {
+  const index = selector.value;
+  if (index === "") {
+    message.textContent = "אנא בחר את ההצעה שתרצה לערוך...";
+    message.className = "error";
+    return;
+  }
 
-    card.innerHTML = `
-      <h2>${item.name}</h2>
-      <p><strong>Feeling:</strong> ${item.feeling}</p>
-      <p><strong>Yes/No:</strong> ${item.yesNo}</p>
-      <p><strong>Equipment:</strong> ${item.equipment || 'None'}</p>
-      <p><strong>Age Restriction:</strong> ${item.age}</p>
-      <p><strong>Intensity:</strong> ${item.intensity}</p>
-      <p><strong>Email:</strong> ${item.email}</p>
-    `;
-
-    container.appendChild(card);
-  });
+  const selected = data[index];
+  localStorage.setItem('editAttraction', JSON.stringify({ ...selected, index: Number(index) }));
+  window.location.href = 'index.html';
+  };
 });
+

@@ -35,3 +35,29 @@ h1 {
   margin: 0.3rem 0;
   font-size: 14px;
 }
+
+.top-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+select {
+  padding: 8px;
+  font-size: 16px;
+}
+
+#displayMessage {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#displayMessage.error {
+  color: red;
+}
+
+#displayMessage.success {
+  color: green;
+}
