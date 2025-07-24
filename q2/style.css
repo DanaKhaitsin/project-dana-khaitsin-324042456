@@ -208,18 +208,19 @@ label {
   box-shadow: 0 0 10px rgba(236, 116, 72, 0.6); 
 }
 
-.label-blue {
+.card label.label-blue {
   background-color: #3f5870;
   color: rgb(243, 255, 255);
 }
 
-.label-yellow {
+.card label.label-yellow {
   background-color: #bebd82;
   color: #180806;
 }
 
-.label-green {
+.card label.label-green {
   background-color: #4d704e;
   color: rgb(249, 255, 252);
 }
+
 
